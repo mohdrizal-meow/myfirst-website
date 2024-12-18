@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>what your thought?</title>
+  <link rel="stylesheet" href="com.css">
+  </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-item active" onclick="setActive(this)">Home</a></li>
+        <li><a href="biodata.html" class="nav-item" onclick="setActive(this)">Biodata</a></li>
+        <li><a href="Portfolio.html" class="nav-item" onclick="setActive(this)">Portfolio</a></li>
+        <li><a href="vedio.html" class="nav-item" onclick="setActive(this)">Video</a></li>
+        <li><a href="comment.html" class="nav-item" onclick="setActive(this)">Comment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="comment-container">
+        <h1>Leave a Comment</h1>
+        <form id="commentForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="comment">Your Comment</label>
+            <textarea id="comment" placeholder="Write your comment here..." required></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div class="comments-display" id="commentsDisplay">
+            <h2>Recent Comments</h2>
+        </div>
+    </div>
+
+
+    <script>
+        const commentForm = document.getElementById('commentForm');
+        const commentsDisplay = document.getElementById('commentsDisplay');
+
+        commentForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            const commentItem = document.createElement('div');
+            commentItem.classList.add('comment-item');
+            commentItem.innerHTML = `
+                <h3>${name}</h3>
+                <p>${comment}</p>
+            `;
+
+            commentsDisplay.appendChild(commentItem);
+            commentForm.reset();
+        });
+    </script>
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

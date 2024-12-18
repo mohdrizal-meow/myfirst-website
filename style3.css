@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+ background: url('img/bg.jpg') no-repeat center center/cover; /* Dark background for contrast */
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  padding-top: 85px; /* Space for the fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Keep it on top */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  background-color: #6d28ff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.nav-links li a:hover {
+  color: #6d28ff;
+}
+
+/* Biodata Section */
+.biodata-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+ background: url('img/bg.jpg') no-repeat center center/cover;
+  border-radius: 20px;
+  padding: 1px;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 3px; /* Added margin to prevent overlap with navbar */
+}
+
+/* Biodata Image */
+.biodata-image img {
+  border-radius: 79%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.biodata-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Biodata Info */
+.biodata-info h1 {
+  font-size: 59px;
+  color: #fff;
+}
+
+.biodata-info h2 {
+  font-size: 40px;
+  color: #6d28ff; /* Purple color for role */
+  margin-bottom: 20px;
+}
+
+.biodata-info p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Name and Role Styling */
+.name {
+  color: #6d28ff;
+  font-weight: bold;
+}
+
+.role {
+  font-style: italic;
+  color: #ea1538; /* Red color for role */
+}
+/* Timetable Container */
+.timetable-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Timetable Title */
+.timetable-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Timetable Table */
+.timetable {
+  margin: 0 auto; /* Center align the table */
+  width: 80%;
+  border-collapse: collapse;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* 3D gradient effect */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.5); /* Shadow effect */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Smooth edges for rounded corners */
+}
+
+/* Table Headings */
+.timetable th {
+  padding: 15px;
+  background-color: #6200ea;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Rows */
+.timetable td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect for Rows */
+.timetable tr:hover {
+  background-color: #f3e8ff; /* Light purple background */
+  transform: scale(1.02); /* Slight pop-out effect */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}

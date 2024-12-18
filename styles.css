@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: url('img/bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  background-color: #6d28ff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.nav-links li a:hover {
+  color: #6d28ff;
+}
+
+/* Block Section Container */
+.block-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  gap: 20px; /* Space between image and text */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 100px auto; /* Center block and add space below navbar */
+}
+
+/* Block Image */
+.block-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Make the image circular */
+  transition: transform 0.3s ease;
+}
+
+.block-image img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Block Text */
+.block-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.block-text h1 {
+  font-size: 24px;
+  color: #6d28ff;
+  margin-bottom: 10px;
+}
+
+/* Quote Section */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.quote-image img {
+  max-width: 400px; /* Adjust as needed */
+  height: auto;
+}
+
+.quote-text {
+  max-width: 63%; /* Adjust as needed */
+}
+
+.quote-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.quote-box {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #000000;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.quote-box:hover {
+  transform: scale(1.1);
+  background-color: #fb2323; /* Change color on hover */
+}
+
+/* Bio Boxes */
+.bio-box {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.bio-text {
+  flex: 1; /* Allows the text to take up remaining space */
+}
+
+.bio-box.center {
+  justify-content: center;
+}
+
+.bio-box.left {
+  justify-content: flex-start;
+}
+
+.bio-box.right {
+  justify-content: flex-end;
+}
+
+.bio-box.right .circle-image {
+  margin-left: 20px; /* Space between image and text for right box */
+  margin-right: 0;
+  
+  

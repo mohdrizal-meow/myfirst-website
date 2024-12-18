@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: url('img/bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links li a:hover {
+  color: #6d28ff;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column; /* Ensures segments are stacked vertically */
+}
+
+.segment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+   background: url('img/bg.jpg') no-repeat center center/cover; 
+  margin: 50 auto;
+  padding: 20px;
+  border-radius: 46px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%; /* Ensures uniform width */
+  height: 250px; /* Fixed height for all segments */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.segment:nth-child(even) {
+  flex-direction: row-reverse; /* Alternate layout */
+}
+
+/* Hover Effect */
+.segment:hover {
+  transform: scale(1.05); /* Pop-out effect */
+  box-shadow: 0 8px 16px rgba(255, 252, 252, 0.2); /* Stronger shadow */
+}
+
+.video-container {
+  flex: 1;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 350px;
+  max-height: 200px; /* Ensure videos fit within the segment */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  flex: 1;
+  text-align: center;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.description h2 {
+  color: #6d28ff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.description p {
+  color: #555;
+  text-align: justify;
+  font-size: 14px;
+}
